@@ -29,24 +29,21 @@ var swiper = new Swiper('.hero__slider', {
     nextEl: '.hero-pag-1',
     prevEl: '.hero-pag-2'
   },
-  breakpoints: {
-    // when window width is >= 320px
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 10
-    },
-    // when window width is >= 480px
-    1250: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      freeMode: false
-    },
+  breakpoints: {// when window width is >= 320px
+    // 1024: {
+    //   spaceBetween: 10
+    // },
+    // // when window width is >= 480px
+    // 1250: {
+    //   spaceBetween: 20,
+    //   freeMode: true,
+    // },
     // when window width is >= 640px
-    1360: {
-      slidesPerView: 6,
-      spaceBetween: 16,
-      freeMode: true
-    }
+    // 1360: {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 16,
+    //   freeMode: true,
+    // }
   }
 }); // slider-hits
 

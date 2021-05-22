@@ -16,6 +16,9 @@
   --color-hawkes-blue: #ebf5fd;
   --color-mandy: #e0595d;
   --color-alto: #d0d0d0;
+  --color-boulder: #7b7b7b;
+  --color-mariner: #247cc8;
+  --color-blumine: #205684;
   --font-family-roboto: "Roboto", sans-serif;
   --font-family-gothampro: "GothamPro", sans-serif;
   --font-family-raleway: "RalewayMedium", sans-serif;
@@ -51,6 +54,13 @@
   font-family: "Roboto";
   src: url("../fonts/../fonts/RobotoMedium.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/../fonts/RobotoRegular.woff2") format("woff2");
+  font-weight: 400;
   font-display: swap;
   font-style: normal; }
 
@@ -92,7 +102,7 @@ a {
   border: none;
   font-family: var(--font-family-roboto);
   padding: 0;
-  background: transparent;
+  background-color: transparent;
   cursor: pointer; }
 
 .container {
