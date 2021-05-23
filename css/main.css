@@ -861,6 +861,13 @@ a {
       line-height: 24px;
       transition: color .3s ease-in-out;
       color: var(--color-tundora); }
+      .hits-slide__name::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; }
       .hits-slide__name:hover {
         transition: color .3s ease-in-out;
         color: var(--color-mandy); }
