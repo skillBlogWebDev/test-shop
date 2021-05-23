@@ -28,46 +28,22 @@ var swiper = new Swiper('.hero__slider', {
   navigation: {
     nextEl: '.hero-pag-1',
     prevEl: '.hero-pag-2'
-  },
-  breakpoints: {// when window width is >= 320px
-    // 1024: {
-    //   spaceBetween: 10
-    // },
-    // // when window width is >= 480px
-    // 1250: {
-    //   spaceBetween: 20,
-    //   freeMode: true,
-    // },
-    // when window width is >= 640px
-    // 1360: {
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 16,
-    //   freeMode: true,
-    // }
   }
 }); // slider-hits
 
 var swiper = new Swiper('.hits__slider', {
-  // slidesPerView: 'auto',
-  // spaceBetween: 16,
   navigation: {
     nextEl: '.hits-pag-1',
     prevEl: '.hits-pag-2'
   },
   breakpoints: {
-    // when window width is >= 320px
-    // 320: {
-    //   slidesPerView: 2,
-    //   spaceBetween: 20
-    // },
-    // when window width is >= 480px
     1024: {
       slidesPerView: 2,
-      spaceBetween: 10
+      spaceBetween: 16
     },
     1150: {
       slidesPerView: 3,
-      spaceBetween: 10
+      spaceBetween: 16
     },
     // when window width is >= 640px
     1450: {

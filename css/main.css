@@ -827,7 +827,7 @@ a {
     margin: 0;
     margin-bottom: 41px; }
   .hits__content {
-    padding: 7px 5px 13px 0;
+    padding: 7px 5px 13px 3px;
     overflow: hidden; }
   .hits__slider {
     position: relative;
@@ -839,12 +839,12 @@ a {
     text-align: center;
     background-color: var(--color-white);
     height: 100%;
-    transition: box-shadow .3s ease-in-out;
-    box-shadow: -1px 4px 13px rgba(0, 0, 0, 0.05);
+    transition: color .3s ease-in-out;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius); }
-    .hits-slide:hover {
-      transition: box-shadow .3s ease-in-out;
-      box-shadow: -1px 4px 9px rgba(0, 0, 0, 0.15); }
+    .hits-slide:hover .hits-slide__name {
+      transition: color .3s ease-in-out;
+      color: var(--color-sunset-orange); }
     .hits-slide img {
       margin-bottom: 20px; }
     .hits-slide__inner {
