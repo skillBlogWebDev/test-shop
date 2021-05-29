@@ -16,6 +16,7 @@
   --color-hawkes-blue: #ebf5fd;
   --color-mandy: #e0595d;
   --color-alto: #d0d0d0;
+  --color-pretty-grey: #f0f0f0;
   --color-boulder: #7b7b7b;
   --color-mariner: #247cc8;
   --color-blumine: #205684;
@@ -81,6 +82,7 @@ html {
 
 body {
   margin: 0;
+  position: relative;
   font-family: var(--font-family-roboto);
   background-color: var(--color-athens-gray); }
 
@@ -113,6 +115,9 @@ a {
 .site-heading {
   font: var(--font-site-heading);
   color: var(--color-mine-shaft); }
+  @media (max-width: 1150px) {
+    .site-heading {
+      font-size: 22px; } }
 
 .site-pag {
   width: 49px;

@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="theme-color" content="#111111">
-  <title>New site</title>
+  <title>Магазин Котлов</title>
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/vendor.css">
   <link rel="stylesheet" href="css/main.css">
@@ -18,47 +18,88 @@
   <div class="container"></div>
 </header>
 <header class="header">
-  <div class="header-top">
-    <div class="container header-top__container">
-      <div class="header__location" aria-label="Сменить город">
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.961509 4.68575C0.706509 4.58325 0.709509 4.43075 0.978509 4.34125L10.5215 1.16025C10.786 1.07225 10.9375 1.22025 10.8635 1.47925L8.13651 11.0223C8.06151 11.2868 7.89901 11.2988 7.77801 11.0573L5.50001 6.50075L0.961509 4.68575ZM3.40651 4.58575L6.22451 5.71325L7.74451 8.75425L9.51751 2.54925L3.40601 4.58575H3.40651Z"/>
+  <div class="header-top burger-menu">
+    <div class="burger-menu__content">
+      <div class="container header-top__container">
+        <div class="header__location" aria-label="Сменить город">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.961509 4.68575C0.706509 4.58325 0.709509 4.43075 0.978509 4.34125L10.5215 1.16025C10.786 1.07225 10.9375 1.22025 10.8635 1.47925L8.13651 11.0223C8.06151 11.2868 7.89901 11.2988 7.77801 11.0573L5.50001 6.50075L0.961509 4.68575ZM3.40651 4.58575L6.22451 5.71325L7.74451 8.75425L9.51751 2.54925L3.40601 4.58575H3.40651Z"/>
           </svg>
-        <a href="#" class="location__city">
-          Москва
-        </a>
-      </div>
-      <div class="header-top__right">
-        <nav class="nav">
-          <ul class="nav__list list-reset">
-            <li class="nav__item">
-              <a href="#" class="nav__link">Доставка и оплата</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">О компании</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Контакты</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link">Оптовым покупателям</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="tel:+780955555555" class="header__number">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5857 13.7874 20.5342 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.5004 10.2413 2.44866 7.27109 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23704 4.68016 9.47187 5.62282 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3777 14.5286 19.3204 14.7635 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          +7(8095) 555-55-55
-        </a>
+          <a href="#" class="location__city">
+            Москва
+          </a>
+        </div>
+        <div class="header-top__right">
+          <nav class="nav">
+            <ul class="nav__list list-reset">
+              <li class="nav__item burger-menu__item">
+                <span class="burger-menu__icon" style="background-image: url('img/catalog.svg');"></span>
+                <a href="#" class="nav__link">Каталог</a>
+              </li>
+              <li class="nav__item burger-menu__item">
+                <span class="burger-menu__icon" style="background-image: url('img/cart.svg');"></span>
+                <a href="#" class="nav__link">Карзина</a>
+              </li>
+              <li class="nav__item burger-menu__item burger-menu__item--desctop">
+                <span class="burger-menu__icon" style="background-image: url('img/pay.svg');"></span>
+                <a href="#" class="nav__link">Доставка и оплата</a>
+              </li>
+              <li class="nav__item burger-menu__item">
+                <span class="burger-menu__icon" style="background-image: url('img/status.svg');"></span>
+                <a href="#" class="nav__link">Статус заказа</a>
+              </li>
+              <li class="nav__item burger-menu__item">
+                <span class="burger-menu__icon" style="background-image: url('img/phone.svg');"></span>
+                <a href="tel:+780955555555" class="nav__link">+7(8095) 555-55-55</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">О компании</a>
+              </li>
+              <li class="nav__item burger-menu__item">
+                <a href="#" class="nav__link">Обратная связь</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Контакты</a>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Оптовым покупателям</a>
+              </li>
+              <li class="nav__item burger-menu__item">
+                <label class="burger-menu__label">
+                  <span class="burger-menu__city">Город</span>
+                  <select class="burger-menu__select" name="city" id="city">
+                    <option value="">Москва</option>
+                    <option value="">Питер</option>
+                    <option value="">Казань</option>
+                    <option value="">Анапа</option>
+                    <option value="">Лондон</option>
+                  </select>
+                </label>
+              </li>
+            </ul>
+          </nav>
+          <a href="tel:+780955555555" class="header__number">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5857 13.7874 20.5342 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.5004 10.2413 2.44866 7.27109 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23704 4.68016 9.47187 5.62282 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3777 14.5286 19.3204 14.7635 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            +7(8095) 555-55-55
+          </a>
+        </div>
       </div>
     </div>
   </div>
   <div class="header-bottom">
     <div class="container header-bottom__container">
-      <a href="#" class="logo header__logo">
-        <img src="img/logo.svg" alt="Логотип Запчасти для газовых котлов">
-      </a>
+      <div class="header-bottom__wrapper">
+        <button class="header__burger burger btn-reset" aria-label="open menu">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+        <a href="#" class="logo header__logo">
+          <img src="img/logo.svg" alt="Логотип Запчасти для газовых котлов">
+        </a>
+      </div>
       <div class="header-bottom__right">
         <form class="header-bottom__form" action="#">
           <input class="header-bottom__input" type="text" name="boiler-detail" placeholder="Я ищу">
@@ -69,18 +110,31 @@
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M12 6V12L16 14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              </svg>
             Статус заказа
           </button>
-          <button class="btn-reset cart__btn">
+          <a class="header__number--mobile" href="tel:+780955555555">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22.0004 16.9201V19.9201C22.0016 20.1986 21.9445 20.4743 21.8329 20.7294C21.7214 20.9846 21.5577 21.2137 21.3525 21.402C21.1473 21.5902 20.905 21.7336 20.6412 21.8228C20.3773 21.912 20.0978 21.9452 19.8204 21.9201C16.7433 21.5857 13.7874 20.5342 11.1904 18.8501C8.77425 17.3148 6.72576 15.2663 5.19042 12.8501C3.5004 10.2413 2.44866 7.27109 2.12042 4.1801C2.09543 3.90356 2.1283 3.62486 2.21692 3.36172C2.30555 3.09859 2.44799 2.85679 2.63519 2.65172C2.82238 2.44665 3.05023 2.28281 3.30421 2.17062C3.5582 2.05843 3.83276 2.00036 4.11042 2.0001H7.11042C7.59573 1.99532 8.06621 2.16718 8.43418 2.48363C8.80215 2.80008 9.0425 3.23954 9.11042 3.7201C9.23704 4.68016 9.47187 5.62282 9.81042 6.5301C9.94497 6.88802 9.97408 7.27701 9.89433 7.65098C9.81457 8.02494 9.62928 8.36821 9.36042 8.6401L8.09042 9.9101C9.51398 12.4136 11.5869 14.4865 14.0904 15.9101L15.3604 14.6401C15.6323 14.3712 15.9756 14.1859 16.3495 14.1062C16.7235 14.0264 17.1125 14.0556 17.4704 14.1901C18.3777 14.5286 19.3204 14.7635 20.2804 14.8901C20.7662 14.9586 21.2098 15.2033 21.527 15.5776C21.8441 15.9519 22.0126 16.4297 22.0004 16.9201Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <button class="btn-reset cart__btn cart__btn--desctop">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+              </svg>
             Корзина
-            <div class="cart__count">1</div>
+            <span class="cart__count"></span>
           </button>
+          <button class="btn-reset cart__btn--mobile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M1 2C0.447715 2 0 2.44772 0 3C0 3.55228 0.447715 4 1 4H2.68121C3.08124 4 3.44277 4.2384 3.60035 4.60608L8.44161 15.9023C9.00044 17.2063 10.3963 17.9405 11.7874 17.6623L19.058 16.2082C20.1137 15.9971 20.9753 15.2365 21.3157 14.2151L23.0712 8.94868C23.7187 7.00609 22.2728 5 20.2251 5H5.94511L5.43864 3.81824C4.96591 2.71519 3.88129 2 2.68121 2H1ZM10.2799 15.1145L6.80225 7H20.2251C20.9077 7 21.3897 7.6687 21.1738 8.31623L19.4183 13.5827C19.3049 13.9231 19.0177 14.1767 18.6658 14.247L11.3952 15.7012C10.9315 15.7939 10.4662 15.5492 10.2799 15.1145Z" fill="#4E4C4C"/>
+              <path d="M11 22C11 23.1046 10.1046 24 9 24C7.89543 24 7 23.1046 7 22C7 20.8954 7.89543 20 9 20C10.1046 20 11 20.8954 11 22Z" fill="#4E4C4C"/>
+              <path d="M21 22C21 23.1046 20.1046 24 19 24C17.8954 24 17 23.1046 17 22C17 20.8954 17.8954 20 19 20C20.1046 20 21 20.8954 21 22Z" fill="#4E4C4C"/>
+            </svg>
+          <span class="cart__count"></span>
+        </button>
         </div>
       </div>
     </div>
@@ -90,7 +144,11 @@
     <main class="main">
       <div class="container main__container">
         <div class="main-list">
-  <h2 class="main-list__title">Каталог товаров</h2>
+  <h2 class="main-list__title">
+    <svg>
+      <use xlink:href="img/sprite.svg#main-title"></use>
+    </svg>
+    Каталог товаров</h2>
   <ul class="main-list__list list-reset">
     <li class="main-list__item">
       <a href="#" class="main-list__link">
@@ -248,7 +306,7 @@
 </div>
 
           <section class="hero">
-  <div class="hero__content clearfix">
+  <div class="hero__content">
     <div class="site-slider hero__slider">
       <div class="swiper-wrapper">
         <a href="#" class="swiper-slide hero__slide">
@@ -286,6 +344,155 @@
     <h1 class="hero__heading">
       Детали для газовых котлов
     </h1>
+  </div>
+  <div class="main-list main-list--tablet">
+    <h2 class="main-list__title">
+      <svg>
+        <use xlink:href="img/sprite.svg#main-title"></use>
+      </svg>
+      Каталог товаров
+    </h2>
+    <div class="main-list__wrapper main-list__wrapper--tablet">
+      <ul class="main-list__list list-reset">
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Вентиляторы, трубки вентури
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Воздушные и предохранительные клапана
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Газовые клапана, электромагниты
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Группы ГВС и гидравлические комплектующие
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Датчики NTC и температуры
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Запчасти для газовых колонок
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Изоляция камеры сгорания
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Инструмент для ремонта котла
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Коаксиальные дымоходы, удлинители
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Краны подпитки котлов
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Магниевые аноды
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Манометры, термометры
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Мембраны котлов и колонок
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Платы управления, розжига, дисплея
+          </a>
+        </li>
+      </ul>
+      <ul class="main-list__list list-reset">
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Прессостаты, реле давления воздуха
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Программаторы, термостаты, терморегуляторы
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Расширительные баки
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Реле (датчики) давления воды
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Реле протока и датчики Холла
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Ручки управления котлов и колонок
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Теплообменники для котла
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Термопары
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Термостаты по перегреву и безопасности
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Трансформаторы розжига
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Запчасти для газовых котлов и колонок
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Циркуляционные насосы, улитки
+          </a>
+        </li>
+        <li class="main-list__item">
+          <a href="#" class="main-list__link">
+            Электроды котлов и колонок
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -482,36 +689,75 @@
           <img src="img/footer-logo.svg" alt="Логотип Магазин запчастей для котлов">
         </a>
       </div>
-      <div class="footer-top__block footer-top__block--shop">
-        <h3 class="footer-top__title">Интернет-магазин</h3>
-        <ul class="footer-top__list list-reset">
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Каталог</a>
+      <div class="footer-top__wrapper">
+        <div class="footer-top__block footer-top__block--shop">
+          <h3 class="footer-top__title">Интернет-магазин</h3>
+          <ul class="footer-top__list list-reset">
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Каталог</a>
+            </li>
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Доставка и оплата</a>
+            </li>
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Как оформить заказ</a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer-accordion__list list-reset">
+          <li class="footer-accordion__item">
+            <button class="footer-accordion__control btn-reset" aria-expanded="false">
+              <span class="footer-accordion__title">Интернет-магазин</span>
+              <span class="footer-accordion__icon"></span>
+            </button>
+            <div class="footer-accordion__content" aria-hidden="true">
+              <ul class="footer-top__list list-reset">
+                <li class="footer-top__item">
+                  <a href="#" class="footer-top__link">Доставка и оплата</a>
+                </li>
+                <li class="footer-top__item">
+                  <a href="#" class="footer-top__link">Как оформить заказ</a>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Доставка и оплата</a>
-          </li>
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Как оформить заказ</a>
+          <li class="footer-accordion__item">
+            <button class="footer-accordion__control btn-reset" aria-expanded="false">
+              <span class="footer-accordion__title">Компания</span>
+              <span class="footer-accordion__icon"></span>
+            </button>
+            <div class="footer-accordion__content" aria-hidden="true">
+              <ul class="footer-top__list list-reset">
+                <li class="footer-top__item">
+                  <a href="#" class="footer-top__link">О компании</a>
+                </li>
+                <li class="footer-top__item">
+                  <a href="#" class="footer-top__link">Обратная связь</a>
+                </li>
+                <li class="footer-top__item">
+                  <a href="#" class="footer-top__link">Оптовым покупателям</a>
+                </li>
+              </ul>
+            </div>
           </li>
         </ul>
-      </div>
-      <div class="footer-top__block footer-top__block--company">
-        <h3 class="footer-top__title">Компания</h3>
-        <ul class="footer-top__list list-reset">
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">О компании</a>
-          </li>
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Обратная связь</a>
-          </li>
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Оптовым покупателям</a>
-          </li>
-          <li class="footer-top__item">
-            <a href="#" class="footer-top__link">Контакты</a>
-          </li>
-        </ul>
+        <div class="footer-top__block footer-top__block--company">
+          <h3 class="footer-top__title">Компания</h3>
+          <ul class="footer-top__list list-reset">
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">О компании</a>
+            </li>
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Обратная связь</a>
+            </li>
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Оптовым покупателям</a>
+            </li>
+            <li class="footer-top__item">
+              <a href="#" class="footer-top__link">Контакты</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="footer-top__block footer-top__block--contacts">
         <h3 class="footer-top__title">Контакты</h3>
@@ -560,6 +806,9 @@
           </ul>
         </div>
       </div>
+      <a href="#" class="footer-top__logo footer-top__logo--mobile">
+        <img src="img/footer-logo.svg" alt="Логотип Магазин запчастей для котлов">
+      </a>
       <p class="footer-bottom__copyright">
         © «Запчасти для газовых котлов» 2021.
       </p>
