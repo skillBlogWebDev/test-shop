@@ -48,6 +48,7 @@ var burgerMenuContent = document.querySelector('.burger-menu__content');
 var body = document.querySelector('body');
 var burgerLine = document.querySelectorAll('.burger__line');
 burger.addEventListener('click', function () {
+  var headerBottom = document.querySelector('.header-bottom');
   burgerMenu.classList.toggle('burger-menu--active');
   burgerMenuContent.classList.toggle('burger-menu--active');
   burgerLine.forEach(function (e) {
@@ -60,6 +61,9 @@ burger.addEventListener('click', function () {
 
   if (burgerMenuContent.classList.contains('burger-menu--active')) {
     burgerMenuContent.style.top = 'calc(0% + 70px)';
+    burgerMenuContent.style.zIndex = '300';
+    burgerMenu.style.zIndex = '300';
+    headerBottom.style.zIndex = '300';
     burger.classList.add('burger-open');
   } else {
     burger.classList.remove('burger-open');
