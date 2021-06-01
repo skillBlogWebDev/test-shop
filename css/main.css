@@ -662,7 +662,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    @media (max-width: 1195px) {
+    @media (max-width: 1210px) {
       .header-top__right {
         width: initial; } }
 
