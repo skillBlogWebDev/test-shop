@@ -664,7 +664,7 @@ a {
     justify-content: space-between; }
     @media (max-width: 1210px) {
       .header-top__right {
-        width: initial; } }
+        width: auto; } }
 
 @media (max-width: 1150px) {
   .header__location {
