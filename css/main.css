@@ -985,6 +985,9 @@ a {
       width: 100%;
       height: 100%;
       box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); }
+      @media (max-width: 480px) {
+        .main__container .main-list--tablet::before {
+          box-shadow: none; } }
     @media (max-width: 1150px) {
       .main__container .main-list--tablet__wrapper {
         display: flex;
