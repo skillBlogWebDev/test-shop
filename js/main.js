@@ -141,10 +141,13 @@ if (titleBoiler) {
 var mainListTitle = document.querySelector('.main-list__title--open');
 var mainListTablet = document.querySelector('.main-list__wrapper--tablet');
 var body = document.querySelector('body');
-mainListTitle.addEventListener('click', function () {
-  mainListTablet.classList.toggle('main-list--visible');
-  body.classList.toggle('main-list--visible');
-});
+
+if (mainListTitle) {
+  mainListTitle.addEventListener('click', function () {
+    mainListTablet.classList.toggle('main-list--visible');
+    body.classList.toggle('main-list--visible');
+  });
+}
 "use strict";
 
 // filter
