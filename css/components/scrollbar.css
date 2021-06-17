@@ -1,0 +1,22 @@
+.simplebar-track {
+  background-color: var(--color-mercury);
+  border-radius: 5px;
+  right: 7px; }
+
+.simplebar-track.simplebar-vertical {
+  padding: 0;
+  top: -3px;
+  width: 8px; }
+
+.simplebar-scrollbar:before {
+  opacity: 1;
+  width: 8px;
+  left: 0;
+  right: 0;
+  background-color: var(--color-silver-chalice); }
+
+.simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  top: 0;
+  bottom: 0; }
+
+/*# sourceMappingURL=scrollbar.css.map */
