@@ -2,7 +2,7 @@ import {
   lSApiKey1
 } from './switch_storage.js';
 const doneClass = 'list-group-item-success';
-// проверяем выполнено ли дело 
+// проверяем выполнено ли дело
 export function checkTodoItemStatus(obj, elemItem) {
   if (obj.done) {
     elemItem.item.classList.toggle(doneClass);
@@ -146,11 +146,16 @@ export async function createTodoApp({
   let todoAppTitle = createAppTitle(title);
   let todoItemForm = createTodoItemForm();
   let todoList = createTodoList();
-  switchBtn.innerHTML = 'Перейти на серверное хранилище';
 
   container.append(todoAppTitle);
   container.append(todoItemForm.form);
   container.append(todoList);
+
+  if (localStorage.getItem(lSApiKey1)) {
+    switchBtn.innerHTML = `Перейти на локальное хранилище`;
+  } else {
+    switchBtn.innerHTML = `Перейти на серверное хранилище`;
+  }
 
   const handlers = {
     onDone: onDoneClick,
@@ -161,11 +166,11 @@ export async function createTodoApp({
     if (localStorage.getItem(lSApiKey1)) {
       const todoItemElement = changeItemAPI(e, handlers);
       todoList.append(todoItemElement);
-      switchBtn.innerHTML = 'Перейти на локальное хранилище';
     } else {
       return;
     }
   });
+
   // отрисовываем элемент из локального хранилища
   let todoArr = JSON.parse(localStorage.getItem(lSkey));
   if (localStorage.getItem(lSkey)) {
