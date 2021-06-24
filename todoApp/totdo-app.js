@@ -1,22 +1,12 @@
-import {
-  lSApiKey1
-} from './switch_storage.js';
-const doneClass = 'list-group-item-success';
-// проверяем выполнено ли дело
-export function checkTodoItemStatus(obj, elemItem) {
-  if (obj.done) {
-    elemItem.item.classList.toggle(doneClass);
-  }
-  elemItem.item.classList.toggle(doneClass);
-}
 // Создаем и возвращаем заголовок страницы
-export function createAppTitle(title) {
+function createAppTitle(title) {
   let appTitle = document.createElement('h2');
   appTitle.innerHTML = title;
   return appTitle;
 }
+
 // Создаем и возвращаем форму для создания дела
-export function createTodoItemForm() {
+function createTodoItemForm() {
   let form = document.createElement('form');
   let input = document.createElement('input');
   let buttonWrapper = document.createElement('div');
@@ -44,14 +34,16 @@ export function createTodoItemForm() {
     button,
   };
 }
-// создаем и вoзвращаем список
-export const createTodoList = () => {
+
+const createTodoList = () => {
   const list = document.createElement('ul');
   list.classList.add('list-group');
   return list;
 };
-// сздаем и возвращаем элемент списка
-export function createTodoItemElement(name) {
+
+let todoArr = [];
+
+function createTodoItem(name) {
   let item = document.createElement('li');
   // кнопки помещаем в элемент, который красиво покажет их в одной группе
   let bouttonGroup = document.createElement('div');
@@ -63,7 +55,6 @@ export function createTodoItemElement(name) {
   const randomID = Math.random() * 15.75;
   item.id = randomID.toFixed(2);
   item.classList.add('list-group-item', 'd-flex', 'justify-content-between', 'align-items-center');
-
   item.textContent = name;
 
   bouttonGroup.classList.add('btn-group', 'btn-group-sm');
@@ -85,64 +76,43 @@ export function createTodoItemElement(name) {
     deleteButton,
   }
 }
-// изменяем/удаляем элемент из серверного хранилища
-function changeItemAPI(todoItem, {
-  onDone,
-  onDelete
-}) {
-  let todoItemList = createTodoItemElement();
-  if (localStorage.getItem(lSApiKey1)) {
-    if (todoItem.done) {
-      todoItemList.item.classList.toggle(doneClass);
-    }
 
-    todoItemList.item.textContent = todoItem.name;
+const changeTodoDone = (arr, todoItem) => {
+  arr.map(obj => {
+    if (obj.id === todoItem.item.id & obj.done === false) {
+      obj.done = true;
+    } else if (obj.id === todoItem.item.id & obj.done === true) {
+      obj.done = false;
+    };
+  });
+}
 
-    todoItemList.doneButton.addEventListener('click', () => {
-      onDone({
-        todoItem,
-        element: todoItemList.item
-      });
-      todoItemList.item.classList.toggle(doneClass, todoItem.done);
-    });
+function switchStatusOfItem(item, btn) {
+  btn.addEventListener('click', () => {
+  todoArr = JSON.parse(localStorage.getItem(lSkey));
+  item.item.classList.toggle('list-group-item-success');
+  changeTodoDone(todoArr, item);
 
-    todoItemList.deleteButton.addEventListener('click', () => {
-      onDelete({
-        todoItem,
-        element: todoItemList.item
-      });
-    });
-  } else {
-    return;
+  localStorage.setItem(lSkey, JSON.stringify(todoArr));
+});
+}
+
+function deleteTodoItem(item, btn) {
+  btn.addEventListener('click', () => {
+  if (confirm('Вы уверены?')) {
+    const deleteItemId = item.item.id;
+    const newList = todoArr.filter(item => item.id !== deleteItemId);
+    let getLocalStorageData = localStorage.getItem(lSkey);
+
+    todoArr = JSON.parse(getLocalStorageData);
+    localStorage.setItem(lSkey, JSON.stringify(newList));
+
+    item.item.remove();
   }
-  todoItemList.item.append(todoItemList.bouttonGroup);
-  return todoItemList.item;
-}
-// изменяем/удаляем элемент из локального хранилища
-function changeItemLS(btnDone, btnDel, item, lSkey, toDone, toDelete) {
-  btnDone.addEventListener('click', () => {
-    toDone(item, lSkey);
-  })
-  btnDel.addEventListener('click', () => {
-    toDelete(item, lSkey);
-  })
+});
 }
 
-export async function createTodoApp({
-  container,
-  lSkey,
-  title
-}, {
-  owner,
-  todoItemList = [],
-  onCreateFormSubmit,
-  onDoneClick,
-  onDeleteClick,
-  setObjToLS,
-  toDone,
-  toDelete
-}, switchBtn) {
-
+function createTodoApp(container, title, lSkey) {
   let todoAppTitle = createAppTitle(title);
   let todoItemForm = createTodoItemForm();
   let todoList = createTodoList();
@@ -151,75 +121,68 @@ export async function createTodoApp({
   container.append(todoItemForm.form);
   container.append(todoList);
 
-  if (localStorage.getItem(lSApiKey1)) {
-    switchBtn.innerHTML = `Перейти на локальное хранилище`;
-  } else {
-    switchBtn.innerHTML = `Перейти на серверное хранилище`;
-  }
-
-  const handlers = {
-    onDone: onDoneClick,
-    onDelete: onDeleteClick
-  };
-  // отрисовываем элемент из серверного хранилища
-  todoItemList.forEach(e => {
-    if (localStorage.getItem(lSApiKey1)) {
-      const todoItemElement = changeItemAPI(e, handlers);
-      todoList.append(todoItemElement);
-    } else {
-      return;
-    }
-  });
-
-  // отрисовываем элемент из локального хранилища
-  let todoArr = JSON.parse(localStorage.getItem(lSkey));
   if (localStorage.getItem(lSkey)) {
+    todoArr = JSON.parse(localStorage.getItem(lSkey));
+
     for (let elemObj of todoArr) {
-      let todoItem = createTodoItemElement();
+      let todoItem = createTodoItem();
 
       todoItem.item.innerHTML = elemObj.name;
       todoItem.item.id = elemObj.id;
 
-      if (elemObj.done) {
-        todoItem.item.classList.toggle(doneClass);
+      if (elemObj.done == true) {
+        todoItem.item.classList.add('list-group-item-success');
+      } else {
+        todoItem.item.classList.remove('list-group-item-success');
       }
 
-      changeItemLS(todoItem.doneButton,
-        todoItem.deleteButton,
-        todoItem,
-        lSkey,
-        toDone,
-        toDelete);
+      // добавляем обработчики на кнопки
+      switchStatusOfItem(todoItem, todoItem.doneButton);
+      deleteTodoItem(todoItem, todoItem.deleteButton);
 
       todoList.append(todoItem.item);
       todoItem.item.append(todoItem.bouttonGroup);
     }
   }
+
   // браузер создает событие 'submit' на форме по нажатию на Enter или на кнопку создания дела
-  todoItemForm.form.addEventListener('submit', async function (e) {
+  todoItemForm.form.addEventListener('submit', function (e) {
     // эта строчка необхадима, чтобы предотвратить стандартное действие браузера
     // в данном случае мы не хотим, чтобы страница перезагружалась при отпрвке формы
     e.preventDefault();
 
-    // проверка, какое хранлище выбрано
-    if (localStorage.getItem(lSApiKey1)) {
-      const todoItem = await onCreateFormSubmit({
-        owner,
-        name: todoItemForm.input.value.trim(),
-      });
+    let todoItem = createTodoItem(todoItemForm.input.value);
 
+    todoArr = JSON.parse(localStorage.getItem(lSkey));
+
+    let getLocalStorageData = localStorage.getItem(lSkey);
+    if (getLocalStorageData == null) {
+      todoArr = [];
     } else {
-      let todoItem = createTodoItemElement(todoItemForm.input.value);
-      setObjToLS = setObjToLS(todoItem, todoItemForm, lSkey);
-      changeItemLS(todoItem.doneButton,
-        todoItem.deleteButton,
-        todoItem,
-        lSkey,
-        toDone,
-        toDelete);
-      todoList.append(todoItem.item);
+      todoArr = JSON.parse(getLocalStorageData);
     }
-    // обнуляем значение в поле, чтобы не пришлось стирать его вручную
+    const addTodoObj = (arr) => {
+      const todoObj = {};
+      todoObj.id = todoItem.item.id;
+      todoObj.name = todoItemForm.input.value;
+      todoObj.done = false;
+
+      arr.push(todoObj);
+    };
+    addTodoObj(todoArr);
+    localStorage.setItem(lSkey, JSON.stringify(todoArr));
+
+    // игнорируем создание элемента, если пользователь ничего не ввел в поле
+    if (!todoItemForm.input.value) {
+      return;
+    }
+
+    // добавляем обработчики на кнопки
+    switchStatusOfItem(todoItem, todoItem.doneButton);
+    deleteTodoItem(todoItem, todoItem.deleteButton);
+    // создаем и добавляем в список новое дело с названием из поля для ввода
+    todoList.append(todoItem.item);
+    // обнуляем значение в поле, чтобы чтобы не пришлось стирать его вручную
     todoItemForm.input.value = '';
     // делаем кнопку снова неактивной после добавления дела
     todoItemForm.button.disabled = !todoItemForm.button.disabled;
